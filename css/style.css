@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/* 全体の設定 */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: #000;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  background:#fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin:0;
+	padding:0;
+}
+
+menu{
+  z-index: 0;
+}
+
+section{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+/* ヘッダー */
+header{
+  margin-top: 0;
+  z-index: 1000;
+}
+
+header a{
+  color: #000;
+}
+
+/*フッター*/
+footer {
+    background-color: #a9a9a9;
+    padding: 3rem 0;
+}
+
+footer p{
+  margin-left: 2%;
+}
+
+footer h5 {
+    border-bottom: 1px solid #ccc;
+}
+
+/*ページトップへ戻るボタン*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background: #666;
+    color: #fff;
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background: #999;
+}
+
+/*パンくずリスト*/
+.breadcrumb {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+.breadcrumb li {
+    list-style-type: none;
+}
+.breadcrumb li a {
+    display: inline-block;
+    color: #959fa5;
+}
+
+/* 768px以上の表示 */
+@media screen and (min-width: 769px){
+  /* 見出し */
+  /* ヘッダーの「茶屋町祭実行委員会」の設定 */
+  h1{
+    margin-left: 2%;
+    font-size:30px;
+  }
+
+  /* あいさつ文の「茶屋町祭実行委員会へようこそ」の設定 */
+  h2{
+    padding-top:173px;
+    margin-left: 2%;
+    text-shadow: #696969 1px 0 10px;
+    font-size: 46px;
+    color: #fff;
+  }
+}
+
+/* 768px以下の表示 */
+@media screen  and (max-width: 768px){
+  /* 位置調整 */
+  main{
+    padding-top: 70px;
+  }
+
+  section{
+    padding-top: 70px;
+  }
+
+  /* 見出し */
+  /* ヘッダーの「茶屋町祭実行委員会」の設定 */
+  h1{
+    margin-top: 20px;
+    margin-left: 2%;
+    font-size:20px;
+    width: 300px;
+  }
+
+  h1 a{
+    color: #fff;
+  }
+
+  /* あいさつ文の「茶屋町祭実行委員会へようこそ」の設定 */
+  h2{
+    padding-top: 100px;
+    margin-left: 2%;
+    text-shadow: #696969 1px 0 10px;
+    font-size: 30px;
+    color: #fff;
+  }
+}

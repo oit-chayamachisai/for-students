@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import url("header.css");
+@import url("style.css");
+
+/* 共通設定 */
+/*横並び*/
+.row{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.row p{
+  font-size: 20px;
+}
+
+/* 左右中央寄せ */
+.center{
+  text-align: center;
+}
+
+/* 部署紹介の囲い */
+.box1 {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.box1 p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* 見出しの装飾 */
+.midasi{
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+  margin-top: 2%;
+  font-size: 26px;
+}
+
+
+/* 新着情報 */
+
+.sin a{
+  color:#000;
+  text-decoration:none;
+}
+.sin span{
+  background-color:#2388b8;
+  border-radius:3px;
+  color:#fff;
+  display:inline-block;
+  margin-right:20px;
+  padding:5px;
+}
+.son time{
+  display: inline-block;
+  font-weight: bold;
+  margin-right:40px;
+}
+.sin p{
+  color:#1c448d;
+  display: inline-block;
+  text-decoration:underline;
+}
+.new::after{
+  content:"NEW";
+  color: #d10606;
+  font-size: 1.1rem;
+  border: 1px solid #d10606;
+  padding: 4px 8px;
+  margin: 0 0 0 20px;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* 仮登録ボタン */
+.btn2-square-pop {
+  width: 50%;
+  height: 60px;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #00a1e8;/*背景色*/
+  border-bottom: solid 2px #00a1e9;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+
+.btn2-square-pop:active {
+  border-bottom: solid 2px #00a1e8;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+/* 仮入部 */
+/* メモ　クリップ　Ａ */
+.clip-box-a {
+ position: relative;
+ margin: 2em auto;
+ padding: 15px 35px 15px 25px;
+ width: 90%; /* ボックス幅 */
+ background-color: #fff; /* ボックス背景色 */
+ color: #555555; /* 文章色 */
+ border: 1px solid #ccc; /* 枠線 */
+ box-shadow: 1px 1px 1px #acacac; /* 影の色 */
+}
+.clip-box-a::before {
+ position: absolute;
+ content: '';
+ top: -15px;
+ right: 10px;
+ height: 55px;
+ width: 15px;
+ border: 3px solid #555555; /*クリップ色 */
+ background-color: none;
+ border-radius: 12px;
+ box-shadow: 1px 1px 2px #999;
+ transform: rotate(10deg);
+ z-index: 1;
+}
+.clip-box-a::after {
+ position: absolute;
+ content: '';
+ top: 0px;
+ width: 10px;
+ right: 20px;
+ border: solid 5px #fff; /*背景色と同じ色にする*/
+ z-index: 2;
+}
+
+/* 768px以上の表示 */
+@media screen and (min-width: 769px){
+  /* 新着情報 */
+  .jyouhou{
+    margin-left: 15%;
+  }
+
+  .sin li{
+    border-bottom:1px dotted #000;
+    list-style:none;
+    padding:10px;
+    width:70%;
+  }
+
+  .font1{
+    font-size: 24px;
+  }
+}
+
+/* 768px以下の表示 */
+@media screen  and (max-width: 768px){
+  /* 新着情報 */
+  .jyouhou{
+    margin-left: 2%;
+  }
+
+  .sin li{
+    border-bottom:1px dotted #000;
+    list-style:none;
+    padding:10px;
+    width:96%;
+  }
+
+  .font1{
+    font-size: 24px;
+  }
+
+
+}
