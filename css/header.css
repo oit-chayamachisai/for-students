@@ -8,8 +8,10 @@
     height: 110px;
   }
 
-  #randomImg{
+  #TopImg{
     background-image: url(../img/Top2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 500px;
   }
 
@@ -65,9 +67,10 @@
 /* 768px以下の表示 未完成*/
 @media screen and (max-width: 768px){
 
-  #randomImg{
+  #TopImg{
     background-image: url(../img/Top2.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 300px;
   }

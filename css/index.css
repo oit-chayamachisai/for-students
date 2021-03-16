@@ -20,6 +20,7 @@
 
 /* 部署紹介の囲い */
 .box1 {
+  text-align: center;
   width: 100%;
   padding: 0.5em 1em;
   margin: 2em 0;
@@ -102,7 +103,6 @@
 }
 
 /* 仮入部 */
-/* メモ　クリップ　Ａ */
 .clip-box-a {
  position: relative;
  margin: 2em auto;
@@ -136,6 +136,8 @@
  border: solid 5px #fff; /*背景色と同じ色にする*/
  z-index: 2;
 }
+
+
 
 /* 768px以上の表示 */
 @media screen and (min-width: 769px){
@@ -171,7 +173,13 @@
   }
 
   .font1{
-    font-size: 24px;
+    font-size: 16px;
+    line-height:50px;
+    margin-left: 2%;
+  }
+
+  .col{
+    flex-direction: column;
   }
 
 

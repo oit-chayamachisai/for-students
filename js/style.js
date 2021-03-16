@@ -25,7 +25,7 @@ $(function () {
 });
 
 $(function(){
-   // #で始まるアンカーをクリックした場合に処理
+   // #1で始まるアンカーをクリックした場合に処理
    $('a[href^=#1]').click(function ()  {
        $('.menu , .btn-line').toggleClass('open');
       // スクロールの速度
