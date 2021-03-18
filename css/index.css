@@ -129,6 +129,10 @@
  z-index: 2;
 }
 
+.chyui{
+  margin: 5% 10%;
+}
+
 
 
 /* 768px以上の表示 */
@@ -159,7 +163,7 @@
     line-height:70px;
   }
 
-  .sss{
+  .box-1{
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -193,8 +197,4 @@
     width:100%;
     text-align: center;
   }
-
-
-
-
 }
