@@ -20,7 +20,6 @@
 
 /* 部署紹介の囲い */
 .box1 {
-  text-align: center;
   width: 100%;
   padding: 0.5em 1em;
   margin: 2em 0;
@@ -33,6 +32,7 @@
   margin: 0;
   padding: 0;
   text-align: left;
+  line-height:50px;
 }
 
 /* 見出しの装飾 */
@@ -155,6 +155,12 @@
 
   .font1{
     font-size: 24px;
+    line-height:70px;
+  }
+
+  .sss{
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -181,6 +187,8 @@
   .col{
     flex-direction: column;
   }
+
+
 
 
 }
