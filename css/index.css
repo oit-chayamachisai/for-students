@@ -3,15 +3,7 @@
 @import url("style.css");
 
 /* 共通設定 */
-/*横並び*/
-.row{
-  display: inline-block;
-  vertical-align: top;
-}
 
-.row p{
-  font-size: 20px;
-}
 
 /* 左右中央寄せ */
 .center{
@@ -141,6 +133,15 @@
 
 /* 768px以上の表示 */
 @media screen and (min-width: 769px){
+  /*横並び*/
+  .row{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .row p{
+    font-size: 20px;
+  }
   /* 新着情報 */
   .jyouhou{
     margin-left: 15%;
@@ -186,6 +187,11 @@
 
   .col{
     flex-direction: column;
+  }
+
+  .row{
+    width:100%;
+    text-align: center;
   }
 
 
