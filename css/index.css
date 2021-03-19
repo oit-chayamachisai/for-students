@@ -3,28 +3,9 @@
 @import url("style.css");
 
 /* 共通設定 */
-
-
 /* 左右中央寄せ */
 .center{
   text-align: center;
-}
-
-/* 部署紹介の囲い */
-.box1 {
-  width: 100%;
-  padding: 0.5em 1em;
-  margin: 2em 0;
-  color: #5d627b;
-  background: white;
-  border-top: solid 5px #5d627b;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-}
-.box1 p {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  line-height:50px;
 }
 
 /* 見出しの装飾 */
@@ -37,13 +18,12 @@
   font-size: 26px;
 }
 
-
 /* 新着情報 */
-
 .sin a{
   color:#000;
   text-decoration:none;
 }
+
 .sin span{
   background-color:#2388b8;
   border-radius:3px;
@@ -52,16 +32,19 @@
   margin-right:20px;
   padding:5px;
 }
+
 .son time{
   display: inline-block;
   font-weight: bold;
   margin-right:40px;
 }
+
 .sin p{
   color:#1c448d;
   display: inline-block;
   text-decoration:underline;
 }
+
 .new::after{
   content:"NEW";
   color: #d10606;
@@ -71,6 +54,61 @@
   margin: 0 0 0 20px;
   display: inline-block;
   line-height: 1;
+}
+
+/* 部署紹介の囲い */
+.box1 {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.box1 p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height:50px;
+}
+
+/* 仮入部 */
+.clip-box-a {
+  position: relative;
+  margin: 2em auto;
+  padding: 15px 35px 15px 25px;
+  width: 90%; /* ボックス幅 */
+  background-color: #fff; /* ボックス背景色 */
+  color: #555555; /* 文章色 */
+  border: 1px solid #ccc; /* 枠線 */
+  box-shadow: 1px 1px 1px #acacac; /* 影の色 */
+}
+
+.clip-box-a::before {
+  position: absolute;
+  content: '';
+  top: -15px;
+  right: 10px;
+  height: 55px;
+  width: 15px;
+  border: 3px solid #555555; /*クリップ色 */
+  background-color: none;
+  border-radius: 12px;
+  box-shadow: 1px 1px 2px #999;
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+.clip-box-a::after {
+  position: absolute;
+  content: '';
+  top: 0px;
+  width: 10px;
+  right: 20px;
+  border: solid 5px #fff; /*背景色と同じ色にする*/
+  z-index: 2;
 }
 
 /* 仮登録ボタン */
@@ -94,58 +132,45 @@
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
 
-/* 仮入部 */
-.clip-box-a {
- position: relative;
- margin: 2em auto;
- padding: 15px 35px 15px 25px;
- width: 90%; /* ボックス幅 */
- background-color: #fff; /* ボックス背景色 */
- color: #555555; /* 文章色 */
- border: 1px solid #ccc; /* 枠線 */
- box-shadow: 1px 1px 1px #acacac; /* 影の色 */
-}
-.clip-box-a::before {
- position: absolute;
- content: '';
- top: -15px;
- right: 10px;
- height: 55px;
- width: 15px;
- border: 3px solid #555555; /*クリップ色 */
- background-color: none;
- border-radius: 12px;
- box-shadow: 1px 1px 2px #999;
- transform: rotate(10deg);
- z-index: 1;
-}
-.clip-box-a::after {
- position: absolute;
- content: '';
- top: 0px;
- width: 10px;
- right: 20px;
- border: solid 5px #fff; /*背景色と同じ色にする*/
- z-index: 2;
-}
-
+/* 注意書き */
 .chyui{
   margin: 5% 10%;
 }
 
-
-
 /* 768px以上の表示 */
 @media screen and (min-width: 769px){
-  /*横並び*/
-  .row{
-    display: inline-block;
-    vertical-align: top;
+  /* あいさつ文「茶屋町祭実行委員会へようこそ」の背景設定 */
+  #TopImg{
+    background-image: url(../img/Top2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
   }
 
-  .row p{
-    font-size: 20px;
+  #TopImg::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.3);
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 110px;
+    right: 0;
+    bottom: 365px;
+    left: 0;
+    content: ' ';
+    z-index: 0;
   }
+
+  /* あいさつ文の「茶屋町祭実行委員会へようこそ」の設定 */
+	h2{
+		position: absolute;
+		margin-top:173px;
+		margin-left: 2%;
+		text-shadow: #696969 1px 0 10px;
+		font-size: 46px;
+		color: #fff;
+		z-index: 2;
+	}
+
   /* 新着情報 */
   .jyouhou{
     margin-left: 15%;
@@ -158,11 +183,23 @@
     width:70%;
   }
 
+  /*部署紹介の画像と文章を横並びにする設定*/
+  .row{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .row p{
+    font-size: 20px;
+  }
+
+  /*新入生の皆様へと茶屋町祭とはと仮入部の文字サイズ設定*/
   .font1{
     font-size: 24px;
     line-height:70px;
   }
 
+  /* 各部署のdivの親要素の設定 */
   .box-1{
     margin-left: 10%;
     margin-right: 10%;
@@ -171,6 +208,40 @@
 
 /* 768px以下の表示 */
 @media screen  and (max-width: 768px){
+  /* あいさつ文「茶屋町祭実行委員会へようこそ」の背景設定 */
+  #TopImg{
+    background-image: url(../img/Top2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+  }
+
+  #TopImg::before{
+    /* 透過した黒を上から重ねるイメージ */
+    background-color: rgba(0,0,0,0.3);
+    height: 300px;
+    /* 自由に位定 */
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    left: 0;
+    content: ' ';
+    z-index: 0;
+  }
+
+  /* あいさつ文の「茶屋町祭実行委員会へようこそ」の設定 */
+	h2{
+		position: absolute;
+		margin-top:100px;
+		margin-left: 2%;
+		text-shadow: #696969 1px 0 10px;
+		font-size: 30px;
+		color: #fff;
+		z-index: 2;
+	}
+
   /* 新着情報 */
   .jyouhou{
     margin-left: 2%;
@@ -183,6 +254,7 @@
     width:96%;
   }
 
+  /*新入生の皆様へと茶屋町祭とはと仮入部の文字サイズ設定*/
   .font1{
     font-size: 16px;
     line-height:50px;
