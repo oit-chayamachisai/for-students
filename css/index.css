@@ -150,11 +150,11 @@
   #TopImg::before{
     /* 透過した黒を上から重ねるイメージ */
     background-color: rgba(0,0,0,0.3);
+    height: 500px;
     /* 自由に位置指定 */
     position: absolute;
     top: 110px;
     right: 0;
-    bottom: 365px;
     left: 0;
     content: ' ';
     z-index: 0;
@@ -225,7 +225,6 @@
     position: absolute;
     top: 70px;
     right: 0;
-
     left: 0;
     content: ' ';
     z-index: 0;

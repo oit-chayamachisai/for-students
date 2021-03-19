@@ -18,7 +18,6 @@ $(function () {
   });
 });
 
-// a[href^=#1]
 $(function () {
   $('.js-btn, .anchor').on('click', function () {// js-btnクラスをクリックすると、
     $('.menu , .btn-line').toggleClass('open');// メニューとバーガーの線にopenクラスをつけ外しする
