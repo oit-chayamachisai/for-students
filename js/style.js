@@ -18,16 +18,14 @@ $(function () {
     });
 });
 
+// a[href^=#1]
 $(function () {
-  $('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
-    $('.menu , .btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
-  })
-});
+  $('.js-btn, .anchor').on('click', function () {// js-btnクラスをクリックすると、
+    $('.menu , .btn-line').toggleClass('open');// メニューとバーガーの線にopenクラスをつけ外しする
 
-$(function(){
-   // #1で始まるアンカーをクリックした場合に処理
-   $('js-btn , a[href^=#1]').click(function () {
-       $('.menu , .btn-line').toggleClass('open');
+    })
+
+    $('a[href^=#]').on('click', function (){
       // スクロールの速度
       var speed = 400; // ミリ秒
       // アンカーの値取得
@@ -39,5 +37,7 @@ $(function(){
       // スムーススクロール
       $('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
-   });
+    })
+
 });
+// a[href^=#1]

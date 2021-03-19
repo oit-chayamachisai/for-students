@@ -104,11 +104,13 @@ footer h5 {
 
   /* あいさつ文の「茶屋町祭実行委員会へようこそ」の設定 */
   h2{
-    padding-top:173px;
+		position: absolute;
+    margin-top:173px;
     margin-left: 2%;
     text-shadow: #696969 1px 0 10px;
     font-size: 46px;
     color: #fff;
+		z-index: 2;
   }
 }
 
@@ -141,10 +143,12 @@ footer h5 {
 
   /* あいさつ文の「茶屋町祭実行委員会へようこそ」の設定 */
   h2{
-    padding-top: 100px;
+		position: absolute;
+    margin-top:100px;
     margin-left: 2%;
     text-shadow: #696969 1px 0 10px;
     font-size: 30px;
     color: #fff;
+		z-index: 2;
   }
 }
