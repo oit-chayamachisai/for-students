@@ -203,7 +203,13 @@
   .box-1{
     margin-left: 10%;
     margin-right: 10%;
+    flex-direction: row;
   }
+
+  .row{
+    width:auto;
+  }
+
 }
 
 /* 768px以下の表示 */
